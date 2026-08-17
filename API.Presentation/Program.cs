@@ -1,4 +1,5 @@
 using API.Business;
+using API.Business.Options;
 using API.Presentation.ExceptionHandling;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,9 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddProblemDetails();
+builder.Services.Configure<PaginationOptions>(
+    builder.Configuration.GetSection(
+        PaginationOptions.SectionName));
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
 var connectionString = builder.Configuration

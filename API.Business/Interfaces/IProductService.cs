@@ -8,7 +8,7 @@ public interface IProductService
         ProductQueryDto query,
         CancellationToken cancellationToken = default);
 
-    Task<ProductDto?> GetByIdAsync(
+    Task<ProductDto> GetByIdAsync(
         int id,
         CancellationToken cancellationToken = default);
 
@@ -16,12 +16,12 @@ public interface IProductService
         CreateProductDto dto,
         CancellationToken cancellationToken = default);
 
-    Task<bool> UpdateAsync(
+    Task UpdateAsync(
         int id,
         UpdateProductDto dto,
         CancellationToken cancellationToken = default);
 
-    Task<bool> DeleteAsync(
+    Task DeleteAsync(
         int id,
         CancellationToken cancellationToken = default);
 }
