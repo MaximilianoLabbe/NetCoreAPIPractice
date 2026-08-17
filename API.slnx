@@ -1,3 +1,5 @@
 <Solution>
-  <Project Path="API/API.csproj" />
+  <Project Path="API.Business/API.Business.csproj" />
+  <Project Path="API.Data/API.Data.csproj" />
+  <Project Path="API.Presentation/API.Presentation.csproj" />
 </Solution>
